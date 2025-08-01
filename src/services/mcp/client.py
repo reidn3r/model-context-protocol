@@ -1,5 +1,5 @@
 from fastmcp import Client
-from src.mcp.server import mcp
+from src.registry.registry import mcp
 
 async def mcp_client_list_all() -> dict:
   async with Client(mcp) as client:

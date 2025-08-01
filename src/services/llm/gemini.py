@@ -14,5 +14,3 @@ class GeminiClient:
         ),
     )
     return response.text
-  
-
