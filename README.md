@@ -57,3 +57,9 @@ GEMINI_MODEL=gemini-2.5-flash
 GEMINI_API_KEY=api-key
 IBGE_API="https://servicodados.ibge.gov.br/api/v1"
 ```
+
+## Execução
+
+```env
+uvicorn src.main:app --reload
+```
