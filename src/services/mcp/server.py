@@ -26,7 +26,7 @@ def area_circle(
 def get_ibge_code(
     city: Annotated[str, Field(description="Nome da cidade (OBRIGATÓRIO)")],
     uf: Annotated[str, Field(description="Sigla do estado (OBRIGATÓRIO)")]
-) -> Municipio:
+) -> int:
     http_client = container.http_client()
     return http_client.get_ibge_code_by_city_uf(city, uf)
 
