@@ -4,7 +4,7 @@ import re
 
 class PromptBuilder:
   def build_main_prompt(self, query: str, tools: list[Tool], memory: dict):
-    return f'''
+    prompt = f'''
       Você é um assistente inteligente que analisa mensagens de usuários e determina qual ação executar.
 
       HISTÓRICO DA CONVERSA:
@@ -45,6 +45,7 @@ class PromptBuilder:
         "reasoning": "Não foi possível determinar a ação adequada"
       }}
   '''
+    return prompt.strip()
   
   def parse_llm_response(self, response: str) -> dict:
     try:
